@@ -1,0 +1,31 @@
+@startuml
+interface MusicPlayer {
+    +play()
+    +pause()
+    +stop()
+}
+
+interface Phone {
+    +call()
+    +answer()
+    +startVoicemail()
+}
+
+interface WebBrowser {
+    +displayPage(String url)
+    +openNewTab(String url)
+    +refreshPage()
+}
+
+class iPhone implements MusicPlayer, Phone, WebBrowser {
+    +play()
+    +pause()
+    +stop()
+    +call()
+    +answer()
+    +startVoicemail()
+    +displayPage(String url)
+    +openNewTab(String url)
+    +refreshPage()
+}
+@enduml
